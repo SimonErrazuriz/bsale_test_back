@@ -13,14 +13,8 @@ app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
 
-/* Variables globales */
-
-
 /* Rutas */
 app.use(require('./routes'));
-
-/* Public */
-
 
 /* Lanzar servidor */
 app.listen(app.get('port'), () => {
