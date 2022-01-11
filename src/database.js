@@ -13,17 +13,17 @@ const pool = mysql.createPool(
 pool.getConnection((err, connection) => {
     if (err) {
         if (err.code === 'PROTOCOL_CONNECTION_LOST') {
-            console.error('DATABASE CONNECTION WAS CLOSED');
+            console.error('Se perdió la conección a la base de datos');
         }
         if (err.code === 'ER_CON_COUNT_ERROR') {
-            console.error('DATABASE HAS TO MANY CONNECTIONS');
+            console.error('La base de datos tiene muchas conecciones');
         }
         if (err.code === 'ECONNREFUSED') {
-            console.error('DATABASE CONNECTION WAS REFUSED');
+            console.error('La conección a la base de datos fue rechazada');
         }
     }
     if (connection) connection.release();
-    console.log('DB is Connected');
+    console.log('Conección exitosa a la base de datos');
     return;
 });
 
