@@ -4,7 +4,8 @@
   "description": "Back del test de postulación a trabajo en Bsale",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "start": "src/index.js"
   },
   "author": "",
   "license": "ISC",
